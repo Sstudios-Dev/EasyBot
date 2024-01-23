@@ -35,7 +35,7 @@ client.once("ready", () => {
 
 client.on("guildMemberAdd", async (member) => {
     // ID of the channel where the welcome message will be sent
-    const welcomeChannelId = "1193826509140529182"; // Replace with the ID of your welcome channel
+    const welcomeChannelId = "Id Channel"; // Replace with the ID of your welcome channel
 
     // Find the channel by its ID
     const welcomeChannel = member.guild.channels.cache.get(welcomeChannelId);
@@ -46,7 +46,7 @@ client.on("guildMemberAdd", async (member) => {
         welcomeChannel.send(`Welcome to the server, ${member.user}! We hope you enjoy your stay.`);
 
         // ID of the role to be assigned to the new member
-        const roleId = "1166130522519519304"; // Replace with the ID of the role you want to assign
+        const roleId = "Id role"; // Replace with the ID of the role you want to assign
 
         // Find the role by its ID
         const role = member.guild.roles.cache.get(roleId);
@@ -65,13 +65,13 @@ client.on("guildMemberAdd", async (member) => {
 });
 
 client.on("boost", (boostedGuild) => {
-    // ID del canal donde se enviará el mensaje de agradecimiento por el boost
-    const thankYouChannelId = "1198761026003419236"; // Reemplaza con el ID de tu canal de agradecimiento
+    // ID of the channel to which the boost thank you message will be sent
+    const thankYouChannelId = "Id Channel"; // Replace with the ID of your thank you channel
 
     // Encuentra el canal por su ID
     const thankYouChannel = boostedGuild.channels.cache.get(thankYouChannelId);
 
-    // Comprueba si se encontró el canal
+    // Check if the channel was found
     if (thankYouChannel) {
         thankYouChannel.send(`Thanks to ${boostedGuild.members.cache.get(boostedGuild.ownerId).user.tag} for the boost! 🚀`);
     } else {
